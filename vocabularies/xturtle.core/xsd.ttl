@@ -48,6 +48,10 @@ xsd:NCName a rdfs:Datatype;
   rdfs:comment "NCName represents XML 'non-colonized' Names. The ·value space· of NCName is the set of all strings which ·match· the NCName production of [Namespaces in XML]. The ·lexical space· of NCName is the set of all strings which ·match· the NCName production of [Namespaces in XML]. The ·base type· of NCName is Name.";
   rdfs:label "NCName" .
 
+xsd:anySimpleType a rdfs:Datatype;
+  rdfs:isDefinedBy <http://www.w3.org/TR/xmlschema-2/#anySimpleType>;
+  rdfs:comment "anySimpleType can be considered as the ·base type· of all ·primitive· datatypes. anySimpleType is considered to have an unconstrained lexical space and a ·value space· consisting of the union of the ·value space·s of all the ·primitive· datatypes and the set of all lists of all members of the ·value space·s of all the ·primitive· datatypes.";
+  rdfs:label "anySimpleType" .
 
 xsd:boolean a rdfs:Datatype;
   rdfs:isDefinedBy <http://www.w3.org/TR/xmlschema-2/#boolean>;
@@ -219,3 +223,8 @@ xsd:minExclusive a owl:DatatypeProperty;
   rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema-2/#rf-minExclusive>;
   rdfs:comment "minExclusive is the ·exclusive lower bound· of the ·value space· for a datatype with the ·ordered· property. The value of minExclusive ·must· be in the ·value space· of the ·base type· or be equal to {value} in {base type definition}.";
   rdfs:label "minExclusive" .
+
+ xsd:maxLength a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema-2/#rf-maxLength>;
+  rdfs:comment "maxLength is the maximum number of units of length, where units of length varies depending on the type that is being ·derived· from. The value of maxLength  ·must· be a nonNegativeInteger.";
+  rdfs:label "maxLength" .
