@@ -1,4 +1,4 @@
-@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -20,13 +20,13 @@
 
 <http://purl.org/vocommons/voaf>
     <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> ;
-    dc:contributor <http://data.semanticweb.org/person/lise-rozat>, <http://data.semanticweb.org/person/pierre-yves-vandenbussche> ;
-    dc:creator <http://data.semanticweb.org/person/bernard-vatant> ;
-    dc:description "A vocabulary to describe linked data vocabularies and their relations."@en, "Un vocabulaire de description des vocabulaires RDF et de leurs relations mutuelles"@fr ;
-    dc:issued "2011-03-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
-    dc:modified "2013-05-24"^^<http://www.w3.org/2001/XMLSchema#date> ;
-    dc:publisher <http://dbpedia.org/resource/Open_Knowledge_Foundation> ;
-    dc:title "Vocabulaire d'un ami"@fr, "Vocabulary of a Friend"@en ;
+    dcterms:contributor <http://data.semanticweb.org/person/lise-rozat>, <http://data.semanticweb.org/person/pierre-yves-vandenbussche> ;
+    dcterms:creator <http://data.semanticweb.org/person/bernard-vatant> ;
+    dcterms:description "A vocabulary to describe linked data vocabularies and their relations."@en, "Un vocabulaire de description des vocabulaires RDF et de leurs relations mutuelles"@fr ;
+    dcterms:issued "2011-03-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    dcterms:modified "2013-05-24"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    dcterms:publisher <http://dbpedia.org/resource/Open_Knowledge_Foundation> ;
+    dcterms:title "Vocabulaire d'un ami"@fr, "Vocabulary of a Friend"@en ;
     <http://purl.org/vocab/frbr/core#realization> <http://purl.org/vocommons/voaf/v1.0>, <http://purl.org/vocommons/voaf/v1.1>, <http://purl.org/vocommons/voaf/v2.0>, <http://purl.org/vocommons/voaf/v2.1>, <http://purl.org/vocommons/voaf/v2.2>, <http://purl.org/vocommons/voaf/v2.3> ;
     vann:preferredNamespacePrefix "voaf" ;
     vann:preferredNamespaceUri "http://purl.org/vocommons/voaf#" ;
@@ -69,7 +69,7 @@ voaf:VocabularySpace
     vs:term_status "testing" .
 
 voaf:classNumber
-    dc:description """
+    dcterms:description """
 		PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX owl:<http://www.w3.org/2002/07/owl#>
 		PREFIX voaf:<http://purl.org/vocommons/voaf#>
@@ -98,7 +98,7 @@ voaf:classNumber
     vs:term_status "stable" .
 
 voaf:dataset
-    dc:isReplacedBy voaf:DatasetOccurrences ;
+    dcterms:isReplacedBy voaf:DatasetOccurrences ;
     a owl:ObjectProperty ;
     rdfs:comment "Deprecated since v2.4"@en, "Déprécié depuis la v2.4"@fr ;
     rdfs:domain voaf:Vocabulary ;
@@ -109,7 +109,7 @@ voaf:dataset
     vs:term_status "deprecated" .
 
 voaf:exampleDataset
-    dc:isReplacedBy voaf:dataset ;
+    dcterms:isReplacedBy voaf:dataset ;
     a owl:ObjectProperty ;
     rdfs:comment "Deprecated since v1.1"@en, "Déprécié depuis la v1.1"@fr ;
     rdfs:isDefinedBy <http://purl.org/vocommons/voaf> ;
@@ -117,7 +117,7 @@ voaf:exampleDataset
     vs:term_status "deprecated" .
 
 voaf:extends
-    dc:description """
+    dcterms:description """
 		PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX owl:<http://www.w3.org/2002/07/owl#>
 		PREFIX voaf:<http://purl.org/vocommons/voaf#>
@@ -148,7 +148,7 @@ voaf:extends
     vs:term_status "stable" .
 
 voaf:generalizes
-    dc:description """
+    dcterms:description """
 		PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 		PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX owl:<http://www.w3.org/2002/07/owl#>
@@ -184,7 +184,7 @@ voaf:generalizes
     vs:term_status "stable" .
 
 voaf:hasDisjunctionsWith
-    dc:description """
+    dcterms:description """
 		PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX owl:<http://www.w3.org/2002/07/owl#>
 		PREFIX voaf:<http://purl.org/vocommons/voaf#>
@@ -211,7 +211,7 @@ voaf:hasDisjunctionsWith
     vs:term_status "testing" .
 
 voaf:hasEquivalencesWith
-    dc:description """
+    dcterms:description """
 		PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX owl:<http://www.w3.org/2002/07/owl#>
 		PREFIX voaf:<http://purl.org/vocommons/voaf#>
@@ -255,7 +255,7 @@ voaf:inDataset
     vs:term_status "testing" .
 
 voaf:metadataVoc
-    dc:description """
+    dcterms:description """
 		PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX owl:<http://www.w3.org/2002/07/owl#>
 		PREFIX voaf:<http://purl.org/vocommons/voaf#>
@@ -307,7 +307,7 @@ voaf:occurrencesInVocabularies
     vs:term_status "testing" .
 
 voaf:propertyNumber
-    dc:description """
+    dcterms:description """
 		PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 		PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX owl:<http://www.w3.org/2002/07/owl#>
@@ -353,7 +353,7 @@ voaf:reliesOn
     rdfs:isDefinedBy <http://purl.org/vocommons/voaf> ;
     rdfs:label "relies on"@en, "réutilise"@fr ;
     rdfs:range voaf:Vocabulary ;
-    rdfs:subPropertyOf dc:references, <http://rdfs.org/ns/void#vocabulary> ;
+    rdfs:subPropertyOf dcterms:references, <http://rdfs.org/ns/void#vocabulary> ;
     vs:term_status "stable" .
 
 voaf:reusedByDatasets
@@ -382,7 +382,7 @@ voaf:similar
     vs:term_status "testing" .
 
 voaf:specializes
-    dc:description """
+    dcterms:description """
 		PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX voaf:<http://purl.org/vocommons/voaf#>
 		PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
@@ -438,7 +438,7 @@ voaf:usedBy
     vs:term_status "stable" .
 
 <http://purl.org/vocommons/voaf/v1.0>
-    dc:date "2011-03-11" ;
+    dcterms:date "2011-03-11" ;
     <http://purl.org/vocab/frbr/core#embodiment> <http://purl.org/vocommons/voaf/v1.0/voaf_v1.0.rdf> ;
     a <http://purl.org/vocab/frbr/core#Expression> ;
     rdfs:comment "First published version"@en, "Première publication"@fr ;
@@ -452,7 +452,7 @@ voaf:usedBy
     a <http://purl.org/vocab/frbr/core#Manifestation> .
 
 <http://purl.org/vocommons/voaf/v1.1>
-    dc:date "2011-11-16" ;
+    dcterms:date "2011-11-16" ;
     <http://purl.org/vocab/frbr/core#embodiment> <http://purl.org/vocommons/voaf/v1.1/voaf_v1.1.rdf> ;
     a <http://purl.org/vocab/frbr/core#Expression> ;
     rdfs:comment "Depreciation of voaf:exampleDataset, replaced by voaf:dataset"@en, "Dépréciation de voaf:exampleDataset, remplacé par voaf:dataset"@fr ;
@@ -466,8 +466,8 @@ voaf:usedBy
     a <http://purl.org/vocab/frbr/core#Manifestation> .
 
 <http://purl.org/vocommons/voaf/v2.0>
-    dc:creator <http://data.semanticweb.org/person/bernard-vatant> ;
-    dc:date "2012-07-03" ;
+    dcterms:creator <http://data.semanticweb.org/person/bernard-vatant> ;
+    dcterms:date "2012-07-03" ;
     <http://purl.org/vocab/frbr/core#embodiment> <http://purl.org/vocommons/voaf/v2.0/voaf_v2.0.rdf> ;
     a <http://purl.org/vocab/frbr/core#Expression> ;
     rdfs:comment "Namespace migré sous purl. Introduction des versions avec FRBR. voaf:Vocabulary rdfs:subClassOf  frbr:Work. Ajout des traductions françaises"@fr, "Namespace moved to purl. Introduction of versions using FRBR. voaf:Vocabulary rdfs:subClassOf  frbr:Work. Added labels and comments in French"@en ;
@@ -481,8 +481,8 @@ voaf:usedBy
     a <http://purl.org/vocab/frbr/core#Manifestation> .
 
 <http://purl.org/vocommons/voaf/v2.1>
-    dc:creator <http://data.semanticweb.org/person/pierre-yves-vandenbussche> ;
-    dc:date "2012-10-15" ;
+    dcterms:creator <http://data.semanticweb.org/person/pierre-yves-vandenbussche> ;
+    dcterms:date "2012-10-15" ;
     <http://purl.org/vocab/frbr/core#embodiment> <http://purl.org/vocommons/voaf/v2.1/voaf_v2.1.rdf> ;
     a <http://purl.org/vocab/frbr/core#Expression> ;
     rdfs:comment "Added desrciption of queries used to infer a particular VOAF relation between two vocabularies"@en, "Ajout des requêtes pour générer des relations VOAF entre deux vocabulaires"@fr ;
@@ -496,8 +496,8 @@ voaf:usedBy
     a <http://purl.org/vocab/frbr/core#Manifestation> .
 
 <http://purl.org/vocommons/voaf/v2.2>
-    dc:creator <http://data.semanticweb.org/person/pierre-yves-vandenbussche> ;
-    dc:date "2013-04-24" ;
+    dcterms:creator <http://data.semanticweb.org/person/pierre-yves-vandenbussche> ;
+    dcterms:date "2013-04-24" ;
     <http://purl.org/vocab/frbr/core#embodiment> <http://purl.org/vocommons/voaf/v2.2/voaf_v2.2.rdf> ;
     a <http://purl.org/vocab/frbr/core#Expression> ;
     rdfs:comment "Added properties to represent metrics of vocabulary elements usage in LOV and LOD"@en, "Ajout de propriétés pour représenter les métriques d'usage d'éléments de vocabulaire dans le LOV et le LOD"@fr ;
@@ -511,8 +511,8 @@ voaf:usedBy
     a <http://purl.org/vocab/frbr/core#Manifestation> .
 
 <http://purl.org/vocommons/voaf/v2.3>
-    dc:creator <http://data.semanticweb.org/person/pierre-yves-vandenbussche> ;
-    dc:date "2013-05-24" ;
+    dcterms:creator <http://data.semanticweb.org/person/pierre-yves-vandenbussche> ;
+    dcterms:date "2013-05-24" ;
     <http://purl.org/vocab/frbr/core#embodiment> <http://purl.org/vocommons/voaf/v2.3/voaf_v2.3.rdf> ;
     a <http://purl.org/vocab/frbr/core#Expression> ;
     rdfs:comment "Refined the voaf:dataset to a more complex element with occurrences information and added extra properties to represent metrics of vocabulary elements usage in LOV and LOD"@en, "Remplacement de voaf:dataset par un objet permettant d'attacher la notion d'occurrenceet ajout supplémentaire de propriétés pour représenter les métriques d'usage d'éléments de vocabulaire dans le LOV et le LOD"@fr ;
